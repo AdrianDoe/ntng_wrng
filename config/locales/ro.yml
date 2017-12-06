@@ -1,0 +1,62 @@
+ro:
+  menu:
+    home: 'ACASĂ'
+    team: 'ECHIPA'
+    expertise: 'EXPERTIZĂ'
+    news: 'NOUTĂȚI'
+    contact: 'CONTACT'
+
+  home_general:
+    more: 'MAI MULT'
+    download: 'DOWNLOAD'
+    career: 'CARIERĂ'
+    interested: 'VREI SĂ APLICI?'
+    in-touch: 'CONTACTEZĂ-NE'
+
+  form_general:
+    name: 'Nume'
+    email: 'Email'
+    subject: 'Subiect'
+    phone: 'Telefon'
+    message: 'Mesaj'
+    send: 'Trimite Mesaj'
+    send-cv: 'Trimite CV'
+    upload: 'Upload CV'
+
+
+  menu_admin:
+    articles: 'ARTICOLE'
+    team: 'ECHIPA'
+    testimonials: 'TESTIMONIALE'
+
+  admin_form:
+    show: 'Deschide'
+    edit: 'Editează'
+    destroy: 'Distruge'
+    back: 'Înapoi'
+    content: 'Conţinut:'
+    name: 'Name:'
+    save: 'Salvează'
+
+  article:
+    list: 'Listă Articole'
+    edit: 'Editează Articol'
+    show: 'Vizualizare Articol'
+    new: 'Articol Nou'
+    title: 'Titlu:'
+    create: 'Creează Articol'
+
+  testimonial:
+    company: 'Companie:'
+    list: 'Lista Testimoniale'
+    new: 'Testimonial Nou'
+    edit: 'Editează Testimonal'
+    show: 'Vizualizare Testimonial'
+
+  team_member:
+    list: 'Listă Membrii Echipă'
+    new: 'Membru Echipă Nou'
+    edit: 'Editează Membru Echipă'
+    show: 'Vizualizare Membru Echipă'
+    role: 'Rol:'
+    picture: 'Poză:'

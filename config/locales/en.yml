@@ -16,18 +16,67 @@
 #
 # This would use the information in config/locales/es.yml.
 #
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  menu:
+    home: 'HOME'
+    team: 'TEAM'
+    expertise: 'EXPERTISE'
+    news: 'NEWS'
+    contact: 'CONTACT'
+
+  home_general:
+    more: 'MORE'
+    download: 'DOWNLOAD'
+    career: 'CAREER'
+    interested: 'INTERESTED IN A JOB?'
+    in-touch: 'GET IN TOUCH'
+
+  form_general:
+    name: 'Your Name'
+    email: 'Your Email'
+    subject: 'Subject'
+    phone: 'Telephone'
+    message: 'Message'
+    send: 'Send Message'
+    send-cv: 'Send Application'
+    upload: 'Upload CV'
+
+  menu_admin:
+    articles: 'ARTICLES'
+    team: 'TEAM'
+    testimonials: 'TESTIMONIALS'
+
+  admin_form:
+    show: 'Show'
+    edit: 'Edit'
+    destroy: 'Destroy'
+    back: 'Back'
+    content: 'Content:'
+    name: 'Name:'
+    save: 'Save'
+
+  article:
+    list: 'Article List'
+    edit: 'Edit Article'
+    show: 'Article Preview'
+    new: 'New Article'
+    title: 'Title:'
+    create: 'Create Article'
+
+  testimonial:
+    company: 'Company:'
+    list: 'Testimonials List'
+    new: 'New Testimonial'
+    edit: 'Edit Testimonal'
+    show: 'Testimonial Preview'
+
+  team_member:
+    list: 'Team Member List'
+    new: 'New Team Member'
+    edit: 'Edit Team Member'
+    show: 'Team Member Preview'
+    role: 'Role:'
+    picture: 'Picture:'

@@ -1,0 +1,70 @@
+#section-contact
+  .container-fluid
+    .row
+      .col-md-5.col-sm-5
+        .row
+          #map
+      .col-md-7.col-sm-7
+        .row
+          .contact-elements
+            =image_tag"", class: 'contact-logo'
+            %h1=t('home_general.in-touch')
+        .row
+          .contact-wrapper
+            .col-md-6.col-sm-6
+              %p.bold-font CLUJ OFFICE
+              &nbsp
+              %p.light-font 22 Avram Iancu,
+              %p.light-font 400071,
+              %p.light-font Cluj-Napoca România
+              &nbsp
+              %p.light-font T (40-364) 98 67 54; 33 98 67
+              %p.light-font F (40-364) 33 98 67
+              %p.light-font E mail cluj.office@maxim.ro
+            .col-md-6.col-sm-6
+              %p.bold-font BUCHAREST OFFICE
+              &nbsp
+              %p.light-font 4-8 Dorobantilor Sector 1,
+              %p.light-font 011141,
+              %p.light-font București România
+              &nbsp
+              %p.light-font T (40-21) 584 77 66
+              %p.light-font F (40-21) 584 77 66
+              %p.light-font E mail office@maxim.ro
+        %form.contact-form{:action => "", :method => "post", :nonvalidate => "", :target => "_blank"}
+          .row
+            .col-md-6.col-sm-6
+              .group
+                %input.input-margin{:name => "NAME", :required => "", :type => "text", :value => ""}/
+                %span.bar
+                %label=t('form_general.name')
+            .col-md-6.col-sm-6
+              .group
+                %input.email-input{:name => "EMAIL", :required => "", :type => "text", :value => ""}/
+                %span.highlight
+                %span.bar
+                %label=t('form_general.email')
+          .row.subject-row
+            .col-md-12.col-sm-12
+              .group
+                %input.subject-input{:name => "SUBJECT", :required => "", :type => "text", :value => ""}/
+                %span.highlight
+                %span.bar
+                %label=t('form_general.subject')
+          .row.message-row
+            .col-md-12.col-sm-12
+              %textarea.message-input.textarea{:cols => "80", :name => "MESSAGE", :placeholder => "Message", :required => "", :rows => "5", :value => ""}=t('form_general.message')
+          .row
+            .col-md-6.col-sm-6.pull-right
+              %button.button.button-contact{:name => "button", :type => "submit"}=t('form_general.send')
+          .row
+            #success.alert.alert-success.display-none{:role => "alert"}
+              %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+                %span{"aria-hidden" => "true"} ×
+              %strong Success!
+              Your email has been sent successfully!
+            #danger.alert.alert-danger.display-none{:role => "alert"}
+              %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+                %span{"aria-hidden" => "true"} ×
+              %strong Error!
+              Your email has not been sent!
