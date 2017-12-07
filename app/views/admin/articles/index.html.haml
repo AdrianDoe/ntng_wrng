@@ -1,0 +1,20 @@
+.article-body
+  .container
+    %h1=t('article.list')
+    .form-group.row
+      %button.button-admin-nav{:type => "submit"}= link_to t('article.new'), new_admin_article_path
+    - @articles.each do |article|
+      %form.form-margin-bottom
+        .form-group.row
+          %label.bold-font.col-sm-2.checkbox=t('article.title')
+          .col-sm-10
+            %p.form-control-static= article.title
+        .form-group.row
+          %label.bold-font.col-sm-2.checkbox=t('admin_form.content')
+          .col-sm-10
+            %p.form-control-static= article.body.truncate(200)
+        .form-inline.row
+          .col-sm-10.col-sm-offset-2
+            %button.button-admin-control{:type => "submit"}= link_to t('admin_form.show'), admin_article_path(article)
+            %button.button-admin-control{:type => "submit"}= link_to t('admin_form.edit'), edit_admin_article_path(article)
+            %button.button-admin-control{:type => "submit"}= link_to t('admin_form.destroy'), admin_article_path(article), method: :delete, data: { confirm: 'Are you sure?' }

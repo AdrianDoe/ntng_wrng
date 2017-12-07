@@ -1,0 +1,18 @@
+= form_for [:admin, @article] do |f|
+  - if article.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(article.errors.count, "error")
+        prohibited this article from being saved:
+      %ul
+        - article.errors.full_messages.each do |message|
+          %li= message
+  %form
+    .form-group.row
+      %label.bold-font=t('article.title')
+      = f.text_field :title, require: true, class: 'form-control'
+    .form-group.row
+      %label.bold-font=t('admin_form.content')
+      = f.text_area :body, :cols => 50, :rows => 10, require: true, class: 'form-control'
+    .form-group.row
+      %button.button-admin-save.pull-right{:type => "submit"}=t('article.save')

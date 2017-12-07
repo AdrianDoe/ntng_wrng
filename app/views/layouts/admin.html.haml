@@ -1,0 +1,28 @@
+!!!
+%html
+  %head
+    %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Assistant:300,400,600,700,800", :rel => "stylesheet"}/
+    %link{:href => "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css", :rel => "stylesheet"}/
+    %title NothingWrong
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %nav.navbar.navbar-nav.navbar-fixed-top.navbar-admin
+      .navbar-header
+        %button.c-hamburger.c-hamburger--htx.collapsed.visible-sm.visible-xs.pull-right{"aria-expanded" => "false", "data-target" => "#navbar-collapse-2", "data-toggle" => "collapse", :type => "button"}
+          %span toggle menu
+      %ul.nav.navbar-nav.visible-md.visible-lg
+        %li= link_to t('menu_admin.articles')
+        %li= link_to t('menu_admin.team')
+        %li= link_to t('menu_admin.testimonials')
+      .hidden-lg.hidden-md
+        .collapse.navbar-collapse#navbar-collapse-2
+          %ul.nav.navbar-nav.nav-menu.mobile-menu
+            %li= link_to t('menu_admin.articles')
+            %li= link_to t('menu_admin.team')
+            %li= link_to t('menu_admin.testimonials')
+  %body#admin-body
+    = yield
