@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :articles
   root 'frontpage#index'
   get 'frontpage/index'
 
