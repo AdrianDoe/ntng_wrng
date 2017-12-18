@@ -2,7 +2,7 @@ ro:
   menu:
     home: 'ACASĂ'
     team: 'ECHIPA'
-    expertise: 'EXPERTIZĂ'
+    products: 'PRODUSE'
     news: 'NOUTĂȚI'
     contact: 'CONTACT'
 
@@ -20,14 +20,11 @@ ro:
     phone: 'Telefon'
     message: 'Mesaj'
     send: 'Trimite Mesaj'
-    send-cv: 'Trimite CV'
-    upload: 'Upload CV'
-
 
   menu_admin:
     articles: 'ARTICOLE'
     team: 'ECHIPA'
-    testimonials: 'TESTIMONIALE'
+    products: 'PRODUCTS'
 
   admin_form:
     show: 'Deschide'
@@ -45,13 +42,6 @@ ro:
     new: 'Articol Nou'
     title: 'Titlu:'
     create: 'Creează Articol'
-
-  testimonial:
-    company: 'Companie:'
-    list: 'Lista Testimoniale'
-    new: 'Testimonial Nou'
-    edit: 'Editează Testimonal'
-    show: 'Vizualizare Testimonial'
 
   team_member:
     list: 'Listă Membrii Echipă'

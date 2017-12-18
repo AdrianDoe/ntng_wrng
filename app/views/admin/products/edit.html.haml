@@ -1,0 +1,7 @@
+.article-body
+  .container
+    %h1=t('product.edit')
+    = render 'form'
+    .form-inline.row
+      %button.button-admin-nav{:type => "submit"}= link_to t('admin_form.show'), [:admin, @product]
+      %button.button-admin-nav{:type => "submit"}= link_to t('admin_form.back'), admin_products_path

@@ -1,0 +1,36 @@
+.article-body
+  .container
+    %h1=t('product.list')
+    .form-group.row
+      %button.button-admin-nav{:type => "submit"}= link_to t('product.new'), new_admin_product_path
+    - @products.each do |product|
+      %form.form-margin-bottom
+        .form-group.row
+          %label.bold-font.col-sm-2.checkbox=t('product.picture')
+          .col-sm-10
+            %p.form-control-static=image_tag product.avatar.url(:medium)
+        .form-group.row
+          %label.bold-font.col-sm-2.checkbox=t('admin_form.title')
+          .col-sm-10
+            %p.form-control-static= product.title
+        .form-group.row
+          %label.bold-font.col-sm-2.checkbox=t('admin_form.price')
+          .col-sm-10
+            %p.form-control-static= product.price
+        .form-group.row
+          %label.bold-font.col-sm-2.checkbox=t('admin_form.content')
+          .col-sm-10
+            %p.form-control-static= product.description
+        .form-group.row
+          %label.bold-font.col-sm-2.checkbox=t('admin_form.size')
+          .col-sm-10
+            %p.form-control-static= product.size
+        .form-group.row
+          %label.bold-font.col-sm-2.checkbox=t('admin_form.content')
+          .col-sm-10
+            %p.form-control-static= product.other
+        .form-inline.row
+          .col-sm-10.col-sm-offset-2
+            %button.button-admin-control{:type => "submit"}= link_to t('admin_form.show'), admin_product_path(product)
+            %button.button-admin-control{:type => "submit"}= link_to t('admin_form.edit'), edit_admin_product_path(product)
+            %button.button-admin-control{:type => "submit"}= link_to t('admin_form.destroy'), [:admin, product], :method => :delete, :data => { :confirm => 'Are you sure?' }

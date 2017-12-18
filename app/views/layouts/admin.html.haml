@@ -15,14 +15,14 @@
         %button.c-hamburger.c-hamburger--htx.collapsed.visible-sm.visible-xs.pull-right{"aria-expanded" => "false", "data-target" => "#navbar-collapse-2", "data-toggle" => "collapse", :type => "button"}
           %span toggle menu
       %ul.nav.navbar-nav.visible-md.visible-lg
-        %li= link_to t('menu_admin.articles')
-        %li= link_to t('menu_admin.team')
-        %li= link_to t('menu_admin.testimonials')
+        %li= link_to t('menu_admin.articles'), admin_articles_path
+        %li= link_to t('menu_admin.team'), admin_teams_path
+        %li= link_to t('menu_admin.products'), admin_products_path
       .hidden-lg.hidden-md
         .collapse.navbar-collapse#navbar-collapse-2
           %ul.nav.navbar-nav.nav-menu.mobile-menu
-            %li= link_to t('menu_admin.articles')
-            %li= link_to t('menu_admin.team')
-            %li= link_to t('menu_admin.testimonials')
+            %li= link_to t('menu_admin.articles'), admin_articles_path
+            %li= link_to t('menu_admin.team'), admin_teams_path
+            %li= link_to t('menu_admin.products'), admin_products_path
   %body#admin-body
     = yield

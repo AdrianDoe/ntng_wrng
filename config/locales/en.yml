@@ -23,7 +23,7 @@ en:
   menu:
     home: 'HOME'
     team: 'TEAM'
-    expertise: 'EXPERTISE'
+    products: 'PRODUCTS'
     news: 'NEWS'
     contact: 'CONTACT'
 
@@ -41,13 +41,11 @@ en:
     phone: 'Telephone'
     message: 'Message'
     send: 'Send Message'
-    send-cv: 'Send Application'
-    upload: 'Upload CV'
 
   menu_admin:
     articles: 'ARTICLES'
     team: 'TEAM'
-    testimonials: 'TESTIMONIALS'
+    products: 'PRODUCTS'
 
   admin_form:
     show: 'Show'
@@ -65,13 +63,6 @@ en:
     new: 'New Article'
     title: 'Title:'
     create: 'Create Article'
-
-  testimonial:
-    company: 'Company:'
-    list: 'Testimonials List'
-    new: 'New Testimonial'
-    edit: 'Edit Testimonal'
-    show: 'Testimonial Preview'
 
   team_member:
     list: 'Team Member List'

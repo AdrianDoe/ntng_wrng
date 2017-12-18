@@ -1,0 +1,23 @@
+.article-body
+  .container
+    %h1=t('team.show')
+    %form
+      .form-group.row
+        %label.bold-font.col-sm-2.checkbox=t('team.picture')
+        .col-sm-10
+          %p.form-control-static= image_tag @team.avatar.url(:medium)
+      .form-group.row
+        %label.bold-font.col-sm-2.checkbox=t('admin_form.name')
+        .col-sm-10
+          %p.form-control-static= @team.name
+      .form-group.row
+        %label.bold-font.col-sm-2.checkbox=t('team.bio')
+        .col-sm-10
+          %p.form-control-static= @team.bio
+      .form-group.row
+        %label.bold-font.col-sm-2.checkbox=t('admin_form.sponsors')
+        .col-sm-10
+          %p.form-control-static= @team.sponsors
+      .form-inline.row
+        %button.button-admin-control{:type => "submit"}= link_to t('admin_form.show'), edit_admin_team_path(@team)
+        %button.button-admin-control{:type => "submit"}= link_to t('admin_form.back'), admin_teams_path

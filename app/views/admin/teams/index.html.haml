@@ -1,0 +1,28 @@
+.article-body
+  .container
+    %h1=t('team.list')
+    .form-group.row
+      %button.button-admin-nav{:type => "submit"}= link_to t('team.new'), new_admin_team_path
+    - @teams.each do |team|
+      %form.form-margin-bottom
+        .form-group.row
+          %label.bold-font.col-sm-2.checkbox=t('team.picture')
+          .col-sm-10
+            %p.form-control-static=image_tag team.avatar.url(:medium)
+        .form-group.row
+          %label.bold-font.col-sm-2.checkbox=t('admin_form.name')
+          .col-sm-10
+            %p.form-control-static= team.name
+        .form-group.row
+          %label.bold-font.col-sm-2.checkbox=t('team.bio')
+          .col-sm-10
+            %p.form-control-static= team.bio
+        .form-group.row
+          %label.bold-font.col-sm-2.checkbox=t('admin_form.sponsors')
+          .col-sm-10
+            %p.form-control-static= team.sponsors
+        .form-inline.row
+          .col-sm-10.col-sm-offset-2
+            %button.button-admin-control{:type => "submit"}= link_to t('admin_form.show'), admin_team_path(team)
+            %button.button-admin-control{:type => "submit"}= link_to t('admin_form.edit'), edit_admin_team_path(team)
+            %button.button-admin-control{:type => "submit"}= link_to t('admin_form.destroy'), [:admin, team], :method => :delete, :data => { :confirm => 'Are you sure?' }

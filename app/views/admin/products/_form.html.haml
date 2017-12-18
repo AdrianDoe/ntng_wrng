@@ -1,0 +1,28 @@
+= form_for [:admin, @product] do |f|
+  - if @product.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@product.errors.count, "error")} prohibited this admin_product from being saved:"
+      %ul
+        - @product.errors.full_messages.each do |msg|
+          %li= msg
+  %form
+    .form-group.row
+      %label.bold-font=t('product.picture')
+      = f.file_field :avatar
+    .form-group.row
+      %label.bold-font=t('admin_form.title')
+      = f.text_field :title, require: true, class: 'form-control'
+    .form-group.row
+      %label.bold-font=t('product.price')
+      = f.text_field :price, require: true, class: 'form-control'
+    .form-group.row
+      %label.bold-font=t('admin_form.description')
+      = f.text_area :description, :cols => 50, :rows => 10, require: true, class: 'form-control'
+    .form-group.row
+      %label.bold-font=t('product.size')
+      = f.text_field :size, require: true, class: 'form-control'
+    .form-group.row
+      %label.bold-font=t('admin_form.other')
+      = f.text_area :other, :cols => 50, :rows => 10, require: true, class: 'form-control'    
+    .form-group.row
+      %button.button-admin-save.pull-right{:type => "submit"}=t('admin_form.save')

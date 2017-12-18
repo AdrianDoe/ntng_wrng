@@ -1,0 +1,6 @@
+.article-body
+  .container
+    %h1=t('product.new')
+    = render 'form'
+    .row
+      %button.button-admin-nav{:type => "submit"}= link_to t('admin_form.back'), admin_products_path
